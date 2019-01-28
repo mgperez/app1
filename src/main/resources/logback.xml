@@ -1,0 +1,28 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!--sets the priority log level for org.springframework-->
+    <logger name="org.springframework">
+        <level value="debug"/>
+    </logger>
+
+    <!--sets the priority log level for org.hibernate-->
+    <logger name="org.hibernate">
+        <level value="debug"/>
+    </logger>
+
+    <!--sets the priority log level for -->
+    <logger name= "com.example.app1">
+        <level value="debug"/>
+    </logger>
+
+    <logger name="deng" level="DEBUG"/>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
